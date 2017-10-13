@@ -11,6 +11,7 @@ class HashSet
   def insert(key)
     if @count >= num_buckets
       resize!
+      # should probably set @count = 0
     end
     if !(self[key].include?(key))
       self[key] << key

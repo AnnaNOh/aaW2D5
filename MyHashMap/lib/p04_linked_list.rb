@@ -95,11 +95,11 @@ class LinkedList
       if current_node.key == key
         current_node.prev.next = current_node.next
         current_node.next.prev = current_node.prev
-        break
+        return true
       end
       current_node = current_node.next
     end
-
+    return false
   end
 
   def each
