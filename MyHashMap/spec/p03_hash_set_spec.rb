@@ -1,5 +1,6 @@
 require 'rspec'
 require 'p03_hash_set'
+require 'byebug'
 
 describe HashSet do
   let(:set) { HashSet.new(8) }

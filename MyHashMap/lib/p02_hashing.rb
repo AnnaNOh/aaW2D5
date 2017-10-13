@@ -21,6 +21,16 @@ class Hash
   # This returns 0 because rspec will break if it returns nil
   # Make sure to implement an actual Hash#hash method
   def hash
-    0
+    keys = self.keys
+    key_arr = keys.map do |key|
+      key.to_s
+    end
+    chars = []
+    key_arr.sort.each do |string|
+      string.chars.each do |char|
+        chars << char.ord
+      end
+    end
+    chars.hash
   end
 end
